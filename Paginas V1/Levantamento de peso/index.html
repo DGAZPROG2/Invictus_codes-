@@ -1,0 +1,2109 @@
+<!-- Reset Browser Styles -->
+<style type="text/css" rel="stylesheet">
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    b,
+    strong {
+        font-weight: bold;
+    }
+
+    i,
+    em {
+        font-style: italic;
+    }
+
+    .rte p {
+        margin: 0;
+    }
+</style>
+
+<!-- Bricks Main Styles -->
+<style type="text/css" rel="stylesheet">
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #FFFFFF;
+        color: #333333;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.42857;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+        margin: 0 !important;
+    }
+
+    h1 {
+        font-size: 41px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    .bricks--page {
+        width: 100%;
+    }
+
+    .bricks--section {
+        width: 100%;
+    }
+
+    .bricks--section>div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bricks--row {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .bricks--column>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bricks--component-box {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .bricks--row {
+            flex-flow: row nowrap;
+        }
+    }
+</style>
+
+<!-- Bricks Component Form Styles -->
+<style type="text/css" rel="stylesheet">
+    .bricks-form {
+        height: auto;
+        width: 100%;
+    }
+
+    .bricks-form__fieldset {
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .bricks-form__field {
+        display: flex;
+        width: 100%;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+
+    .bricks-form__label {
+        position: relative !important;
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0.4em;
+        line-height: 1.25;
+        vertical-align: middle;
+    }
+
+    .bricks-form__input {
+        display: block;
+        width: 100%;
+        padding: 0 0.5em;
+        line-height: 1.42857;
+    }
+
+    .bricks-form__input.error {
+        border: 1px solid red !important;
+    }
+
+    .bricks-form__field__option .bricks-form__label {
+        padding-left: 1.33em;
+        margin-bottom: 0.2em;
+    }
+
+    .bricks-form__field__option .bricks-form__label input[type="checkbox"],
+    .bricks-form__field__option .bricks-form__label input[type="radio"] {
+        margin: 0px 0px 0px -1.33em;
+    }
+
+    .bricks-form__submit {
+        position: relative;
+    }
+</style>
+
+<link
+    href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif|Lato|Lobster|Open+Sans|Oswald|PT+Sans|Raleway|Source+Sans+Pro|Ubuntu|Roboto"
+    rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css" rel="stylesheet" />
+
+<!-- Bricks Static Shared Styles -->
+<style type="text/css" rel="stylesheet">
+    .bricks--component-video div {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        line-height: 0;
+        box-sizing: border-box;
+    }
+
+    .bricks--component-video div iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+
+<!-- Bricks Static Text Styles -->
+<style type="text/css" rel="stylesheet">
+    .bricks--component-text {
+        color: #333;
+        line-height: 1.42;
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+
+    .bricks--component-text a {
+        color: #31a2ff;
+        text-decoration: none;
+    }
+
+    .bricks--component-text sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    .bricks--component-text sub {
+        bottom: -0.25em;
+    }
+
+    .bricks--component-text sup {
+        top: -0.5em;
+    }
+
+    .bricks--component-text ol,
+    .bricks--component-text ul {
+        padding-left: 1.5em;
+    }
+
+    .bricks--component-text ol>li,
+    .bricks--component-text ul>li {
+        list-style-type: none;
+    }
+
+    .bricks--component-text ul>li::before {
+        content: '\2022';
+    }
+
+    .bricks--component-text li::before {
+        display: inline-block;
+        white-space: nowrap;
+        width: 1.2em;
+    }
+
+    .bricks--component-text li:not(.ql-direction-rtl)::before {
+        margin-left: -1.5em;
+        margin-right: 0.3em;
+        text-align: right;
+    }
+
+    .bricks--component-text li.ql-direction-rtl::before {
+        margin-left: 0.3em;
+        margin-right: -1.5em;
+    }
+
+    .bricks--component-text ol li:not(.ql-direction-rtl),
+    .bricks--component-text ul li:not(.ql-direction-rtl) {
+        padding-left: 1.5em;
+    }
+
+    .bricks--component-text ol li.ql-direction-rtl,
+    .bricks--component-text ul li.ql-direction-rtl {
+        padding-right: 1.5em;
+    }
+
+    .bricks--component-text ol li {
+        counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+        counter-increment: list-0;
+    }
+
+    .bricks--component-text ol li:before {
+        content: counter(list-0, decimal) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-1 {
+        counter-increment: list-1;
+    }
+
+    .bricks--component-text ol li.ql-indent-1:before {
+        content: counter(list-1, lower-alpha) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-1 {
+        counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-2 {
+        counter-increment: list-2;
+    }
+
+    .bricks--component-text ol li.ql-indent-2:before {
+        content: counter(list-2, lower-roman) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-2 {
+        counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-3 {
+        counter-increment: list-3;
+    }
+
+    .bricks--component-text ol li.ql-indent-3:before {
+        content: counter(list-3, decimal) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-3 {
+        counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-4 {
+        counter-increment: list-4;
+    }
+
+    .bricks--component-text ol li.ql-indent-4:before {
+        content: counter(list-4, lower-alpha) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-4 {
+        counter-reset: list-5 list-6 list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-5 {
+        counter-increment: list-5;
+    }
+
+    .bricks--component-text ol li.ql-indent-5:before {
+        content: counter(list-5, lower-roman) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-5 {
+        counter-reset: list-6 list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-6 {
+        counter-increment: list-6;
+    }
+
+    .bricks--component-text ol li.ql-indent-6:before {
+        content: counter(list-6, decimal) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-6 {
+        counter-reset: list-7 list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-7 {
+        counter-increment: list-7;
+    }
+
+    .bricks--component-text ol li.ql-indent-7:before {
+        content: counter(list-7, lower-alpha) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-7 {
+        counter-reset: list-8 list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-8 {
+        counter-increment: list-8;
+    }
+
+    .bricks--component-text ol li.ql-indent-8:before {
+        content: counter(list-8, lower-roman) '. ';
+    }
+
+    .bricks--component-text ol li.ql-indent-8 {
+        counter-reset: list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-9 {
+        counter-increment: list-9;
+    }
+
+    .bricks--component-text ol li.ql-indent-9:before {
+        content: counter(list-9, decimal) '. ';
+    }
+
+    .bricks--component-text .ql-indent-1:not(.ql-direction-rtl) {
+        padding-left: 3em;
+    }
+
+    .bricks--component-text li.ql-indent-1:not(.ql-direction-rtl) {
+        padding-left: 4.5em;
+    }
+
+    .bricks--component-text .ql-indent-1.ql-direction-rtl.ql-align-right {
+        padding-right: 3em;
+    }
+
+    .bricks--component-text li.ql-indent-1.ql-direction-rtl.ql-align-right {
+        padding-right: 4.5em;
+    }
+
+    .bricks--component-text .ql-indent-2:not(.ql-direction-rtl) {
+        padding-left: 6em;
+    }
+
+    .bricks--component-text li.ql-indent-2:not(.ql-direction-rtl) {
+        padding-left: 7.5em;
+    }
+
+    .bricks--component-text .ql-indent-2.ql-direction-rtl.ql-align-right {
+        padding-right: 6em;
+    }
+
+    .bricks--component-text li.ql-indent-2.ql-direction-rtl.ql-align-right {
+        padding-right: 7.5em;
+    }
+
+    .bricks--component-text .ql-indent-3:not(.ql-direction-rtl) {
+        padding-left: 9em;
+    }
+
+    .bricks--component-text li.ql-indent-3:not(.ql-direction-rtl) {
+        padding-left: 10.5em;
+    }
+
+    .bricks--component-text .ql-indent-3.ql-direction-rtl.ql-align-right {
+        padding-right: 9em;
+    }
+
+    .bricks--component-text li.ql-indent-3.ql-direction-rtl.ql-align-right {
+        padding-right: 10.5em;
+    }
+
+    .bricks--component-text .ql-indent-4:not(.ql-direction-rtl) {
+        padding-left: 12em;
+    }
+
+    .bricks--component-text li.ql-indent-4:not(.ql-direction-rtl) {
+        padding-left: 13.5em;
+    }
+
+    .bricks--component-text .ql-indent-4.ql-direction-rtl.ql-align-right {
+        padding-right: 12em;
+    }
+
+    .bricks--component-text li.ql-indent-4.ql-direction-rtl.ql-align-right {
+        padding-right: 13.5em;
+    }
+
+    .bricks--component-text .ql-indent-5:not(.ql-direction-rtl) {
+        padding-left: 15em;
+    }
+
+    .bricks--component-text li.ql-indent-5:not(.ql-direction-rtl) {
+        padding-left: 16.5em;
+    }
+
+    .bricks--component-text .ql-indent-5.ql-direction-rtl.ql-align-right {
+        padding-right: 15em;
+    }
+
+    .bricks--component-text li.ql-indent-5.ql-direction-rtl.ql-align-right {
+        padding-right: 16.5em;
+    }
+
+    .bricks--component-text .ql-indent-6:not(.ql-direction-rtl) {
+        padding-left: 18em;
+    }
+
+    .bricks--component-text li.ql-indent-6:not(.ql-direction-rtl) {
+        padding-left: 19.5em;
+    }
+
+    .bricks--component-text .ql-indent-6.ql-direction-rtl.ql-align-right {
+        padding-right: 18em;
+    }
+
+    .bricks--component-text li.ql-indent-6.ql-direction-rtl.ql-align-right {
+        padding-right: 19.5em;
+    }
+
+    .bricks--component-text .ql-indent-7:not(.ql-direction-rtl) {
+        padding-left: 21em;
+    }
+
+    .bricks--component-text li.ql-indent-7:not(.ql-direction-rtl) {
+        padding-left: 22.5em;
+    }
+
+    .bricks--component-text .ql-indent-7.ql-direction-rtl.ql-align-right {
+        padding-right: 21em;
+    }
+
+    .bricks--component-text li.ql-indent-7.ql-direction-rtl.ql-align-right {
+        padding-right: 22.5em;
+    }
+
+    .bricks--component-text .ql-indent-8:not(.ql-direction-rtl) {
+        padding-left: 24em;
+    }
+
+    .bricks--component-text li.ql-indent-8:not(.ql-direction-rtl) {
+        padding-left: 25.5em;
+    }
+
+    .bricks--component-text .ql-indent-8.ql-direction-rtl.ql-align-right {
+        padding-right: 24em;
+    }
+
+    .bricks--component-text li.ql-indent-8.ql-direction-rtl.ql-align-right {
+        padding-right: 25.5em;
+    }
+
+    .bricks--component-text .ql-indent-9:not(.ql-direction-rtl) {
+        padding-left: 27em;
+    }
+
+    .bricks--component-text li.ql-indent-9:not(.ql-direction-rtl) {
+        padding-left: 28.5em;
+    }
+
+    .bricks--component-text .ql-indent-9.ql-direction-rtl.ql-align-right {
+        padding-right: 27em;
+    }
+
+    .bricks--component-text li.ql-indent-9.ql-direction-rtl.ql-align-right {
+        padding-right: 28.5em;
+    }
+
+    .bricks--component-text .ql-direction-rtl {
+        direction: rtl;
+        text-align: inherit;
+    }
+</style>
+
+<!-- Defines page width style to row components -->
+<style>
+    .bricks--section>div {
+        max-width: 960px;
+    }
+</style>
+
+<div class="bricks--container">
+    <div class="bricks--page">
+
+        <style>
+            .first-content {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .block-first-content {
+                max-width: 940px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 40px 20px;
+            }
+
+            .block-first-content p {
+                font-family: Ubuntu, sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                color: #333333;
+                line-height: 23px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: start;
+            }
+
+            .block-first-content h2 {
+                font-family: Ubuntu, sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                color: #333333;
+                line-height: 30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .title-first {
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 20px !important;
+                margin-top: 20px !important;
+                color: #01a650;
+                font-family: Ubuntu, sans-serif;
+                text-align: center;
+            }
+
+            .sub-title-first {
+                margin-bottom: 10px !important;
+                margin-top: 10px !important;
+            }
+
+            @media screen and (max-width: 767px) {
+                .block-first-content {
+                    width: 90%;
+                }
+            }
+        </style>
+        <style type="text/css" rel="stylesheet">
+            #rd-image-kgqwxrqj {
+                align-self: center;
+                width: 100%;
+            }
+
+            #rd-image-kgqwxrqj a,
+            #rd-image-kgqwxrqj img {
+                width: 100%;
+                height: auto;
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            @media screen and (max-width: 767px) {
+                #rd-image-kgqwxrqj {
+                    align-self: center;
+                }
+            }
+        </style>
+
+        <div id="rd-image-kgqwxrqj" class="bricks--component bricks--component-image rd-image">
+            <img src="https://cdn.shopify.com/s/files/1/0269/9647/3961/files/271pj4up3ee.jpg?v=1619281987" alt="">
+        </div>
+
+        <section>
+            <div class="first-content">
+                <div class="block-first-content">
+                    <h1 class="title-first">Você busca ELEVAR o nível do seu LPO?</h1>
+                    <h2 class="sub-title-first">Não importa se você é iniciante ou avançado. Se você quer aumentar as
+                        suas cargas no
+                        Levantamento de Peso, esse é o programa para você!</h2>
+                    <p>O Invictus LPO é o melhor programa para você que quer melhorar o seu nível de LPO! Ele é
+                        feito para todos os praticantes de CrossFit / esportes de força que querem aumentar as
+                        suas cargas ou para você que quer se dedicar inteiramente à modalidade de Levantamento
+                        de Peso.</p>
+                    <p>O programa tem um período de duração total de 12 semanas, sendo 3 sessões de treinamento
+                        por semana, com tempo médio de 75-90 minutos por sessão. Esse programa também pode ser
+                        incluído na sua grade de treinos, sendo complementar ao seu programa atual.</p>
+                    <p>O programa é elaborado em conjunto com a maior referência de LPO das Américas, Luis
+                        Lopez, também conhecido como "Cubano LPO". Nos treinamentos, além dos exercícios
+                        clássicos (Snatch e Clean & Jerk), você encontrará exercícios especiais (variações dos 2
+                        exercícios clássicos) e exercícios auxiliares, tudo planificado para melhorar sua força,
+                        velocidade, resistência e técnica.</p>
+                    <p>Esse programa irá lhe proporcionar uma base sólida no ganho de força e desenvolvimento
+                        técnico, o que levará a conquistar novos PRs!</p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .second-section {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .container-second-section {
+                width: 70%;
+                max-width: 940px;
+                padding-top: 10px;
+                padding-bottom: 50px;
+
+            }
+
+            .two-div {
+                margin-bottom: 40px;
+            }
+
+            .container-second-section .one-div span {
+                color: #01a850;
+            }
+
+            .container-second-section .one-div h2 {
+                color:#01A850;
+                font-family: Ubuntu, sans-serif;
+                font-size: 30px;
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .container-second-section .one-div h3 {
+                color: #272727;
+                font-family: Ubuntu, sans-serif;
+                font-size: 23px;
+                font-weight: 400;
+                text-align: center;
+            }
+            
+            .container-second-section .two-div h3 {
+                color: #272727;
+                font-family: Ubuntu, sans-serif;
+                font-size: 30px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .container-second-section .two-div h4 {
+                color: #01a850;
+                font-weight: 700;
+                font-family: Ubuntu, sans-serif;
+                font-size: 36px;
+                text-align: center;
+            }
+
+            .container-second-section .midle-div  {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding-top:50px;
+                padding-bottom:50px;
+            }
+            .container-second-section .midle-div button {
+                background-color: #01A850;
+                border: none;
+                outline: none;
+                padding:20px 50px;
+                border-radius: 25px;
+                font-size: 23px;
+                font-weight: 700;
+                color:white;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 767px) {
+                .container-second-section {
+                    width: 90%;
+                }
+                .container-second-section .midle-div button {
+                    padding: 10px 25px;
+                }
+            }
+        </style>
+
+        <section class="second-section">
+            <div class="container-second-section">
+                <div class="one-div">
+                    <h2>VAGAS LIMITADAS!</h2>
+                    <h3>FAÇA A SUA PRÉ-INSCRIÇÃO E GARANTA A SUA VAGA COM<br> ANTECEDÊNCIA!</h3>
+                </div>
+                <div class="midle-div">
+                    <a target="_blank" href="https://conteudo.invictusbrasil.com.br/pre-inscricoes-invictus-lpo">
+                    <button>FAZER PRÉ-INSCRIÇÃO</button></a>
+                </div>
+                <div class="two-div">
+                    <h3>PRÓXIMA TURMA:</h3>
+                    <h4>INÍCIO DIA 14 DE JUNHO!</h4>
+                </div>
+            </div>
+        </section>
+
+        <style type="text/css" rel="stylesheet">
+            #rd-section-joq3m2vh {
+
+                background-image: url(https://d335luupugsy2.cloudfront.net/cms/files/159722/1602800569/$d1k2venfcnf), linear-gradient(to bottom, rgba(74, 144, 226, 0) 0%, rgba(74, 144, 226, 0) 100%);
+                background-position-x: 0%;
+                background-position-y: 0%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: scroll;
+
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-radius: 0px;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            #rd-section-joq3m2vh>div:not(.bricks--row) {
+                min-height: 0px;
+            }
+        </style>
+
+        <section id="rd-section-joq3m2vh" class="bricks--section rd-section">
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-joq3m2vi {
+                    min-height: 122px;
+                }
+
+                #rd-row-joq3m2vi .bricks--column>div {
+                    min-height: 122px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-joq3m2vi.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-joq3m2vi" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-joq3m2vj {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-joq3m2vj>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-joq3m2vj>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-joq3m2vj" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgbex85v {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 816px;
+                                margin-top: 20px;
+                                margin-bottom: 0px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgbex85v" class="bricks--component bricks--component-text rd-text">
+                            <h2
+                                style="font-weight:bold; text-align: center; color: rgb(1, 168, 80); font-family: Ubuntu, sans-serif; font-size: 30px;">
+                                INSCREVA-SE E RECEBA O SEGUINTE:</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kgqxfg7c {
+                    min-height: 101px;
+                }
+
+                #rd-row-kgqxfg7c .bricks--column>div {
+                    min-height: 101px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kgqxfg7c.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kgqxfg7c" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgqxfg7d {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-kgqxfg7d>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgqxfg7d>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgqxfg7d" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgqxfwmz {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto-20px;
+                                max-width: 437px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgqxfwmz" class="bricks--component bricks--component-text rd-text">
+                            <p style="line-height: 1; text-align: center;"><strong
+                                    style="font-size: 20px; color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif;">1.
+                                    Três sessões de treinos por semana de 75-90 minutos cada (segundas, quartas e
+                                    sextas) durante 3 meses</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgqxfi06 {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-kgqxfi06>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgqxfi06>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgqxfi06" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgqxhef3 {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 429px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgqxhef3" class="bricks--component bricks--component-text rd-text">
+                            <p style="line-height: 1; text-align: center;"><strong
+                                    style="font-size: 20px; color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif;">2.
+                                    Exercícios complementares e acessórios aos treinos de Snatch e Clean &amp; Jerk
+                                    para desenvolver sua força e técnica</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kgqxfmj6 {
+                    min-height: 126px;
+                }
+
+                #rd-row-kgqxfmj6 .bricks--column>div {
+                    min-height: 126px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kgqxfmj6.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kgqxfmj6" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgqxfmj7 {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-kgqxfmj7>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgqxfmj7>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgqxfmj7" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgqxh0wg {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 429px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgqxh0wg" class="bricks--component bricks--component-text rd-text">
+                            <p style="text-align: center; line-height: 1;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255); font-size: 20px;">3.
+                                    Acesso ao V Mobility, biblioteca de vídeos de mobilidade e ativação para fazer
+                                    antes e após os seus treinos</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgqxfmj8 {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-kgqxfmj8>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgqxfmj8>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgqxfmj8" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgqxhcng {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto-20px;
+                                max-width: 453px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgqxhcng" class="bricks--component bricks--component-text rd-text">
+                            <p style="text-align: center; line-height: 1;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255); font-size: 20px;">4.
+                                    Suporte de Luis Lopez com uma live/video a cada duas semanas respondendo dúvidas
+                                    e analisando vídeos de movimentos</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <style type="text/css" rel="stylesheet">
+            #rd-section-kcmavnoq {
+
+                background-color: #ffffff;
+
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-radius: 0px;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            #rd-section-kcmavnoq>div:not(.bricks--row) {
+                min-height: 0px;
+            }
+        </style>
+
+        <section id="rd-section-kcmavnoq" class="bricks--section rd-section">
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kgbf9p0e {
+                    min-height: 354px;
+                }
+
+                #rd-row-kgbf9p0e .bricks--column>div {
+                    min-height: 354px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kgbf9p0e.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kgbf9p0e" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgbf9qgi {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-kgbf9qgi>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 30px;
+                        padding-bottom: 0px;
+                        padding-left: 30px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgbf9qgi>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgbf9qgi" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgse569o {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 816px;
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgse569o" class="bricks--component bricks--component-text rd-text">
+                            <h2
+                                style="font-weight: bold; text-align: center; color: rgb(1, 168, 80); font-family: Ubuntu, sans-serif; font-size: 36px;">
+                                CONQUISTE NOVOS PRs!
+                            </h2>
+                        </div>
+
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-image-kgsiaob9 {
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                align-self: center;
+                                max-width: 460px;
+                            }
+
+                            #rd-image-kgsiaob9 a,
+                            #rd-image-kgsiaob9 img {
+                                width: 460px;
+                                max-width: 100%;
+                                height: auto;
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                            }
+
+                            @media screen and (max-width: 767px) {
+                                #rd-image-kgsiaob9 {
+                                    align-self: center;
+                                }
+                            }
+                        </style>
+
+
+
+                        <div id="rd-image-kgsiaob9" class="bricks--component bricks--component-image rd-image">
+
+                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/159722/1612879417/$nebls4tksra"
+                                alt="">
+
+
+                        </div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgse569r {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto-96px;
+                                max-width: 940px;
+                                margin-top: 10px;
+                                margin-bottom: 50px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgse569r" class="bricks--component bricks--component-text rd-text">
+                            <p
+                                style="text-align: justify; line-height: 1.25; font-size: 20px; font-family: Ubuntu, sans-serif; color: rgb(0, 0, 0);">
+                                Juntando toda a experiência de anos de competição no CrossFit da Invictus com os anos de
+                                experiência de Luis Lopez no LPO, nós conseguimos montar uma planificação ótima
+                                para que você possa evoluir as suas cargas e melhorar os seus movimentos!
+                            </p>
+                            <p style="font-weight:bold; margin-top:25px; text-align: center; line-height: 1.25; font-size: 24px; font-family: Ubuntu, sans-serif; color: rgb(0, 0, 0);">
+                                Com o nosso suporte e apoio, temos certeza que você vai conquistar novos PRs durante esse período!
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+
+        <style type="text/css" rel="stylesheet">
+            #rd-section-kcnnws88 {
+
+                background-color: #2a2a2a;
+
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-radius: 0px;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            #rd-section-kcnnws88>div:not(.bricks--row) {
+                min-height: 0px;
+            }
+        </style>
+
+        <section id="rd-section-kcnnws88" class="bricks--section rd-section">
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kcnnws89 {
+                    min-height: 50px;
+                }
+
+                #rd-row-kcnnws89 .bricks--column>div {
+                    min-height: 50px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kcnnws89.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kcnnws89" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kcnnws8a {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-kcnnws8a>div {
+
+                        background-color: transparent;
+
+                        justify-content: flex-start;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kcnnws8a>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kcnnws8a" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgbgsn30 {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 816px;
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgbgsn30" class="bricks--component bricks--component-text rd-text">
+                            <h2 style="text-align: center;"><strong
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif; font-size: 36px;">PERGUNTAS
+                                    FREQUENTES</strong></h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kcnnws8c {
+                    min-height: 50px;
+                }
+
+                #rd-row-kcnnws8c .bricks--column>div {
+                    min-height: 50px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kcnnws8c.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kcnnws8c" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kcnnws8d {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-kcnnws8d>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 30px;
+                        padding-bottom: 0px;
+                        padding-left: 30px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kcnnws8d>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kcnnws8d" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kcnnws8e {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto-96px;
+                                max-width: 940px;
+                                margin-top: 10px;
+                                margin-bottom: 50px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kcnnws8e" class="bricks--component bricks--component-text rd-text">
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80); font-size: 18px;">Posso
+                                    me inscrever a qualquer momento?</strong></p>
+                            <p style="line-height: 1.5;"><span
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif;">Não, o
+                                    programa Invictus LPO funciona com turmas. As inscrições para a primeira turma
+                                    se encerraram no dia 14 de Março. Se você quiser fazer o programa, entre em
+                                    contato para saber quando abriremos vagas para a Turma 2!</span></p>
+                            <p style="line-height: 1.5;"><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-size: 18px; color: rgb(1, 168, 80); font-family: Ubuntu, sans-serif;">Acabei
+                                    de me inscrever no programa, quando devo começar?</strong></p>
+                            <p><span style="font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255);">Você pode
+                                    iniciar assim que você quiser e tiver disponibilidade. Nós sugerimos que você
+                                    inicie junto com a turma no primeiro dia estipulado na planilha para que tenha o
+                                    acompanhamento correto, mas você pode iniciar quando quiser e terá acesso aos
+                                    treinos conforme os dias forem passando.</span></p>
+                            <p><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-size: 18px; font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80);">Quando
+                                    são postados os treinos?</strong></p>
+                            <p><span
+                                    style="background-color: transparent; font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255);">Todos
+                                    domingos você receberá as três sessões de treino que deverão ser realizadas na
+                                    semana. Você terá a oportunidade de encaixá-los em sua rotina quando quiser,
+                                    lembrando que sugerimos você fazer sempre nas segundas, quartas e sextas.</span>
+                            </p>
+                            <p><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80); font-size: 18px;">Eu
+                                    terei suporte do Time Invictus durante os treinos?</strong></p>
+                            <p style="line-height: 1.5;"><span
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif;">Sim, uma vez
+                                    a cada duas semanas faremos uma sessão entre Luis Lopez e todos os participantes
+                                    do programa, onde você terá oportunidade de tirar dúvidas sobre a planilha e
+                                    enviar vídeos de movimentos para correção. Além disso, você terá acesso ao nosso
+                                    grupo exclusivo do Programa LPO no Whatsapp para conversar e tirar dúvidas sobre
+                                    o dia-a-dia do programa.</span></p>
+                            <p><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80); font-size: 18px;">Os
+                                    % dos treinos devem ser calculados com base em que?</strong></p>
+                            <p><span
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif; background-color: transparent; font-size: 16px;">Todos
+                                    os % devem ser calculados com base nos movimentos clássicos (Snatch e Clean
+                                    &amp; Jerk). Por exemplo, o % para o movimento "Press" deve ser calculado com
+                                    base na sua repetição máxima de Jerk, e o % para o movimento "Clean Pull" deve
+                                    ser calculado com base na sua repetição máxima de Clean. As exceções são os
+                                    movimentos de Back Squat e Front Squat, que devem ser utilizados o seu máximo
+                                    naquele determinado agachamento para fazer o cálculo.</span></p>
+                            <p><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80); font-size: 18px;">Se
+                                    eu estiver errando repetições nos percentuais do treino, o que devo
+                                    fazer?</strong></p>
+                            <p><span style="color: rgb(249, 249, 249); font-family: Ubuntu, sans-serif;">Caso você
+                                    erre um determinado peso duas vezes seguidas, nós recomendamos que você baixe o
+                                    peso para a carga anterior e termine os movimentos naquele peso.</span></p>
+                            <p><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; color: rgb(1, 168, 80); font-size: 18px;">Eu
+                                    preciso utilizar sapatilhas de LPO?</strong></p>
+                            <p><span
+                                    style="font-size: 16px; font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255);">Nós
+                                    recomendamos que você utilize sim. Os melhores levantadores de peso utilizam por
+                                    algum motivo. Elas ajudam!</span></p>
+                            <p style="line-height: 1.5;"><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="font-family: Ubuntu, sans-serif; font-size: 18px; color: rgb(1, 168, 80);">Eu
+                                    posso utilizar straps (puxadores) nos treinos?</strong></p>
+                            <p><span
+                                    style="background-color: transparent; font-family: Ubuntu, sans-serif; color: rgb(255, 255, 255); font-size: 16px;">Sim,
+                                    contanto que você não se torne dependente deles. Nós recomendamos utilizar para
+                                    fazer Snatch e movimentos de puxadas ou deadlifts, nós não recomendamos usar
+                                    para fazer Clean ou qualquer movimento de Clean &amp; Jerk.</span></p>
+                            <p style="line-height: 1.5;"><br></p>
+                            <p style="line-height: 1.5;"><strong
+                                    style="color: rgb(1, 168, 80); font-size: 18px; font-family: Ubuntu, sans-serif;">Como
+                                    funciona a Política de Cancelamento e Reembolso?</strong></p>
+                            <p style="line-height: 1.5;"><span
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif;">Nós temos
+                                    certeza que os programas vão elevar o seu nível. Porém, caso você não consiga
+                                    continuar por qualquer motivo, você terá um prazo de 7 dias para solicitar o
+                                    reembolso integral do seu valor contados a partir do fechamento do programa,
+                                    após esse prazo o valor não é mais reembolsável. Se precisar entre em contato
+                                    por e-mail.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style type="text/css" rel="stylesheet">
+            #rd-section-joq3m2w2 {
+
+                background-color: rgba(255, 255, 255, 1);
+
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-radius: 0px;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            #rd-section-joq3m2w2>div:not(.bricks--row) {
+                min-height: 0px;
+            }
+        </style>
+
+        <section id="rd-section-joq3m2w2" class="bricks--section rd-section">
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kgbgin6q {
+                    min-height: 50px;
+                }
+
+                #rd-row-kgbgin6q .bricks--column>div {
+                    min-height: 50px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kgbgin6q.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kgbgin6q" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kgbgin6r {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-kgbgin6r>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 10px;
+                        padding-bottom: 0px;
+                        padding-left: 10px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kgbgin6r>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kgbgin6r" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kgbgidg5 {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 816px;
+                                margin-top: 60px;
+                                margin-bottom: 20px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kgbgidg5" class="bricks--component bricks--component-text rd-text">
+                            <h2
+                                style="font-weight:bold; text-align: center;color: rgb(1, 168, 80); font-family: Ubuntu, sans-serif; font-size: 36px;">
+                                QUEM SERÁ SEU COACH?
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-joq3m2w3 {
+                    min-height: 400px;
+                }
+
+                #rd-row-joq3m2w3 .bricks--column>div {
+                    min-height: 400px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-joq3m2w3.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-joq3m2w3" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-joq3m2w4 {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-joq3m2w4>div {
+
+                        background-color: transparent;
+
+                        justify-content: flex-start;
+                        padding-top: 0px;
+                        padding-right: 20px;
+                        padding-bottom: 0px;
+                        padding-left: 20px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-joq3m2w4>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-joq3m2w4" class="bricks--column rd-column">
+                    <div>
+                        <style type="text/css" rel="stylesheet">
+                            #rd-image-joq3m2w5 {
+                                margin-top: 40px;
+                                margin-bottom: 7px;
+                                align-self: center;
+                                max-width: 422px;
+                            }
+
+                            #rd-image-joq3m2w5 a,
+                            #rd-image-joq3m2w5 img {
+                                width: 422px;
+                                max-width: 100%;
+                                height: auto;
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                            }
+
+                            @media screen and (max-width: 767px) {
+                                #rd-image-joq3m2w5 {
+                                    align-self: center;
+                                }
+                            }
+                        </style>
+                        <div id="rd-image-joq3m2w5" class="bricks--component bricks--component-image rd-image">
+                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/159722/1613571479/$nyh9w5m08ze"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-joq3m2w8 {
+                        flex: 6 0 0;
+                    }
+
+                    #rd-column-joq3m2w8>div {
+
+                        background-color: transparent;
+
+                        justify-content: flex-start;
+                        padding-top: 0px;
+                        padding-right: 7px;
+                        padding-bottom: 0px;
+                        padding-left: 7px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-joq3m2w8>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-joq3m2w8" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-joq3m2wa {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 192px;
+                                margin-top: 7px;
+                                margin-bottom: 7px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-joq3m2wa" class="bricks--component bricks--component-text rd-text">
+                            <h4 style="text-align: center;"><strong
+                                    style="color: rgb(1, 168, 80); font-family: Ubuntu, sans-serif; font-size: 24px;">Luis
+                                    Lopez "Cubano"</strong></h4>
+                        </div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-joq3m2wb {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 285px;
+                                margin-top: 7px;
+                                margin-bottom: 40px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-joq3m2wb" class="bricks--component bricks--component-text rd-text">
+                            <p style="text-align: justify;"><em
+                                    style="font-family: Open Sans, sans-serif; color: rgb(0, 0, 0); font-size: 16px;">Luis
+                                    Lopez, também conhecido como&nbsp;Cubano LPO,&nbsp;é um dos mais renomados
+                                    treinadores de LPO do mundo. Com 37 anos de experiência como treinador, Cubano
+                                    acumula em seu curriculum mais de 500 medalhas internacionais. Entre elas estão
+                                    6 ouros em Panamericanos e 17 medalhas em Campeonatos Mundiais.&nbsp;Com
+                                    participação em 4 Olimpíadas, Cubano é considerado hoje um dos maiores
+                                    formadores de atletas das Américas.</em></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <style type="text/css" rel="stylesheet">
+            #rd-section-kcmqsm2g {
+
+                background-color: rgba(1, 168, 80, 1);
+
+                border-bottom-style: none;
+                border-color: #000000;
+                border-left-style: none;
+                border-radius: 0px;
+                border-right-style: none;
+                border-top-style: none;
+                border-width: 1px;
+            }
+
+            #rd-section-kcmqsm2g>div:not(.bricks--row) {
+                min-height: 0px;
+            }
+        </style>
+
+        <section id="rd-section-kcmqsm2g" class="bricks--section rd-section">
+
+
+            <style type="text/css" rel="stylesheet">
+                #rd-row-kcmqsm2h {
+                    min-height: 303px;
+                }
+
+                #rd-row-kcmqsm2h .bricks--column>div {
+                    min-height: 303px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    #rd-row-kcmqsm2h.bricks--row.rd-row {
+                        min-height: auto;
+                    }
+                }
+            </style>
+
+            <div id="rd-row-kcmqsm2h" class="bricks--row rd-row">
+
+
+                <style type="text/css" rel="stylesheet">
+                    #rd-column-kcmqsm2i {
+                        flex: 12 0 0;
+                    }
+
+                    #rd-column-kcmqsm2i>div {
+
+                        background-color: transparent;
+
+                        justify-content: center;
+                        padding-top: 0px;
+                        padding-right: 30px;
+                        padding-bottom: 0px;
+                        padding-left: 30px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        #rd-column-kcmqsm2i>div {
+                            min-height: auto !important;
+                        }
+                    }
+                </style>
+
+                <div id="rd-column-kcmqsm2i" class="bricks--column rd-column">
+                    <div>
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-text-kcmqsm2k {
+                                border-bottom-style: none;
+                                border-color: #000000;
+                                border-left-style: none;
+                                border-radius: 0px;
+                                border-right-style: none;
+                                border-top-style: none;
+                                border-width: 1px;
+                                min-height: auto0px;
+                                max-width: 816px;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                align-self: center;
+                                width: 100%;
+                                word-break: break-word;
+                            }
+                        </style>
+
+                        <div id="rd-text-kcmqsm2k" class="bricks--component bricks--component-text rd-text">
+                            <h2 style="line-height: 1; text-align: center;"><strong
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif; font-size: 30px;">AINDA
+                                    TEM ALGUMA PERGUNTA?</strong></h2>
+                            <h2 style="line-height: 1; text-align: center;"><span
+                                    style="color: rgb(255, 255, 255); font-family: Ubuntu, sans-serif; font-size: 20px;">MANDA
+                                    UM WHATSAPP PRA GENTE!</span></h2>
+                        </div>
+
+
+                        <style type="text/css" rel="stylesheet">
+                            #rd-button-kcmqsm2n {
+                                -ms-flex-align: center;
+                                -ms-flex-direction: column;
+                                -ms-flex-pack: center;
+                                align-items: center;
+                                align-self: center;
+                                background-color: rgba(1, 168, 80, 1);
+                                border-bottom-style: solid;
+                                border-color: #ffffff;
+                                border-left-style: solid;
+                                border-radius: 26px;
+                                border-right-style: solid;
+                                border-top-style: solid;
+                                border-width: 5px;
+                                color: #FFFFFF;
+                                cursor: pointer;
+                                display: -ms-flexbox;
+                                display: flex;
+                                flex-direction: column;
+                                font-family: Ubuntu, sans-serif;
+                                font-size: 20px;
+                                font-style: italic;
+                                font-weight: bold;
+                                height: 65px;
+                                justify-content: center;
+                                line-height: 1.42857;
+                                margin-bottom: 40px;
+                                margin-top: 10px;
+                                max-width: 502px;
+                                text-align: center;
+                                text-decoration: none;
+                                width: 100%;
+                            }
+
+                            @media screen and (max-width: 767px) {
+                                #rd-button-kcmqsm2n {
+                                    height: auto;
+                                    padding-top: 0.66em;
+                                    padding-bottom: 0.66em;
+                                }
+                            }
+                        </style>
+
+
+                        <a class="bricks--component bricks--component-button rd-button"
+                            href="https://api.whatsapp.com/send?phone=5511989665232&text=Quero%20saber%20mais%20sobre%20o%20Programa%20LPO%20Invictus!"
+                            id="rd-button-kcmqsm2n" target="_blank" title="Any Title">
+                            TIRAR DÚVIDAS AGORA!
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
